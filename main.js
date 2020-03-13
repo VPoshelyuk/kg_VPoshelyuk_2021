@@ -9,7 +9,7 @@
 
 const oneToOneMapping = (s1, s2) => {
     if(s1.length === 0) return "true"
-    if(s2.length !== s1.length || s2.length === 0) return "false"
+    if(s1.length > s2.length || s2.length === 0) return "false"
     let check = {}
     for(let i = 0; i < s1.length; i++){
         if(!check[s1[i]]) check[s1[i]] = s2[i]

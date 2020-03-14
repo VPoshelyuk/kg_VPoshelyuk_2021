@@ -20,6 +20,8 @@ const oneToOneMapping = (s1, s2) => {
     return "true"
 }
 
-console.log(oneToOneMapping.apply(null, myArgs))
+if(myArgs.length === 2)console.log(oneToOneMapping.apply(null, myArgs))
+else console.log("Wrong number of arguments!")
 
 module.exports = oneToOneMapping
+

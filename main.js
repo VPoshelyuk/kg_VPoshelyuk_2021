@@ -7,6 +7,8 @@
 // But given s1 = bar and s2 = foo, print "true" since each 
 // character in "bar" can be mapped to a character in "foo". 
 
+const myArgs = process.argv.slice(2)
+
 const oneToOneMapping = (s1, s2) => {
     if(s1.length === 0) return "true"
     if(s1.length > s2.length || s2.length === 0) return "false"
@@ -17,5 +19,7 @@ const oneToOneMapping = (s1, s2) => {
     }
     return "true"
 }
+
+console.log(oneToOneMapping.apply(null, myArgs))
 
 module.exports = oneToOneMapping
